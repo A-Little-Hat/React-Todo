@@ -3,6 +3,10 @@ import Todos from './components/Todos'
 import Footer from './components/Footer'
 
 function App() {
+  const deletetodo =(number)=>{
+    console.log("deleted",number)
+    todos.splice(number,1)
+  }
   let todos = [
     {
       no:0,
@@ -20,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Todos todolist={todos}/>
+      <Todos todolist={todos} delete={deletetodo} />
       <Footer/>
     </div>
   );

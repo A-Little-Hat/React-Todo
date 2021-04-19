@@ -4,8 +4,8 @@ const TodoItem = (props) => {
     return (
         <div className="my-3">
            <h3>name: {props.todo.title}</h3>
-           <h5>name: {props.todo.no}</h5>
-           <button className="btn btn-sm btn-danger">Delete</button>
+           <h5>no: {props.todo.no}</h5>
+           <button className="btn btn-sm btn-danger" onClick={props.delete(props.todo.no)} >Delete</button>
         </div>
     );
 }
