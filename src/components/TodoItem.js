@@ -5,7 +5,7 @@ const TodoItem = (props) => {
         <div className="my-3">
            <h3>name: {props.todo.title}</h3>
            <h5>no: {props.todo.no}</h5>
-           <button className="btn btn-sm btn-danger" onClick={props.delete(props.todo.no)} >Delete</button>
+           <button className="btn btn-sm btn-danger" onClick={props.delete.bind(this,props.todo)} >Delete</button>
         </div>
     );
 }

@@ -1,13 +1,18 @@
 import Header from './components/Header'
 import Todos from './components/Todos'
 import Footer from './components/Footer'
+import React,{useState} from 'react'
 
 function App() {
-  const deletetodo =(number)=>{
-    console.log("deleted",number)
-    todos.splice(number,1)
+  const deletetodo =(todo)=>{
+    // let index=todos.indexOf(todo)
+    console.log("deleted",todo)
+    // todos.splice(index,1)
+    settodos(todos.filter((e)=>{
+      return e!==todo;
+    }))
   }
-  let todos = [
+  const [todos, settodos] = useState ([
     {
       no:0,
       title:"eat"
@@ -20,7 +25,7 @@ function App() {
       no:2,
       title:"code"
     }
-  ]
+  ])
   return (
     <div className="App">
       <Header/>
