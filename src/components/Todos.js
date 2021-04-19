@@ -1,11 +1,16 @@
 import React from 'react'
-import TodoList from './TodoList'
+import TodoItem from './TodoItem'
 
-export default function Todos() {
+export default function Todos(props) {
     return (
         <div className="container">
-            <h3>Todos List</h3>
-            {}
+            <h3 className="text-center my-3">Todos List</h3>
+            {
+                props.todolist.map((todo)=>{
+                    return <TodoItem todo={todo}/>
+                })
+            }
+            
         </div>
     )
 }
