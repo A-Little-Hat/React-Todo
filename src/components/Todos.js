@@ -1,10 +1,9 @@
 import React from 'react'
 import TodoItem from './TodoItem'
+import {todostyle} from '../styles/todos'
 
 export default function Todos(props) {
-    const todostyle={
-        minHeight:"40vh"
-    }
+    
     return (
         <div className="container my-4" style={todostyle}>
             <hr/>
