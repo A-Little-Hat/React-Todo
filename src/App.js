@@ -33,10 +33,8 @@ function App() {
     console.log(additem)
   }
   useEffect(() => {
-    return () => {
-      localStorage.setItem("todo-list", JSON.stringify(todos));  
-    }
-  },[todos])
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+  }, [todos]);
   return (
     <div className="container">
       <Header/>
